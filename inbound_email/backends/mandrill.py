@@ -38,7 +38,7 @@ def _detect_base64(s):
 
 
 def _check_mandrill_signature(request, key):
-    expected = request.META.get('HTTP_X_MANDRILL_SIGNATURE', None)
+    expected = request.headers.get('x-mandrill-signature', None)
     url = request.build_absolute_uri()
     # Mandrill appends the POST params in alphabetical order of the key.
     params = sorted(request.POST.items(), key=lambda x: x[0])

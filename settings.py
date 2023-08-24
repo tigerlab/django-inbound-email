@@ -56,7 +56,6 @@ SECRET_KEY = "something really, really hard to guess goes here."
 
 
 USE_I18N = True
-USE_L10N = True
 USE_TZ = True
 
 LANGUAGE_CODE = getenv('DEFAULT_LANGUAGE_CODE', 'en-gb')
